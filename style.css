@@ -93,6 +93,9 @@ nav ul li a:hover::after {
     font-weight: 600;
     color: whitesmoke;
 }
+.about-col-2 p{
+    text-align: justify;
+}
 .tab-titles{
     display: flex;
     margin: 20px 0 40px;

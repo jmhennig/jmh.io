@@ -340,6 +340,53 @@ form .btn2{
     color: #20cb17;
 }
 
+/* ---------------- Linksheet ------------------ */
+#links-header{
+    width: 100%;
+    background-position: center;
+}
+.links-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.project{
+    background: #262626fe;
+    padding: 40px;
+    font-size: 18px;
+    font-weight: 300;
+    border-radius: 20px;
+    transition:  0.4s ease-in-out;
+}
+.project p{
+    padding-top: 15px;
+    font-size: 15px;
+    line-height: 2;
+    width: 100%;
+    color:#ababab;
+}
+.project .row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.project .column1{
+    flex-basis: 50%
+}
+.project .column2{
+    flex-basis: 50%;
+    text-align: right;
+}
+.column2 .btn2{
+    font-size: 15px;
+    font-weight: 500;
+    margin: 12px 40px;
+    width: 75%;
+    text-align: center;
+    cursor: pointer;
+}
+
 
 /* -----------------css for small screens-------------- */
 nav .fa-solid{
@@ -374,6 +421,7 @@ nav .fa-solid{
         padding-top: 50px;
         z-index: 2;
         transition: right 0.5s;
+        box-shadow: 5px 0 10px 5px black;
     }
     nav ul li{
         display: block;
@@ -414,5 +462,12 @@ nav .fa-solid{
     }
     .copyright i{
         font-size: 16px;
+    }
+    .project .column1, .project .column2{
+        flex-basis: 100%;
+        text-align: center;
+    }
+    .project .column2{
+        margin-top: 20px;
     }
 }

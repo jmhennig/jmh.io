@@ -481,4 +481,7 @@ nav .fa-solid{
     .project .column2{
         margin-top: 20px;
     }
+    .demo-video{
+        width: 100%;
+    }
 }

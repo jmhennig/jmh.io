@@ -398,13 +398,6 @@ form .btn2{
     border-radius: 20px;
     box-shadow: 5px 5px 40px black;
 }
-font-size: 15px;
-    font-weight: 500;
-    margin: 30px 40px;
-    width: 75%;
-    text-align: center;
-    box-shadow: 5px 5px 40px black;
-    cursor: pointer;
 
 /* -----------------css for small screens-------------- */
 nav .fa-solid{

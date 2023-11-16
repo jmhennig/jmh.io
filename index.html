@@ -11,6 +11,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="icon" href="Images/favicon2.ico">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script src="https://kit.fontawesome.com/6654d6be92.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -46,7 +48,7 @@
     <div class="container">
         <div class="row">
             <div class="about-col-1">
-                <img src="Images/J-about2.JPG" alt="">
+                <img class="about-img" src="Images/J-about2.JPG" alt="">
             </div>
             <div class="about-col-2">
                 <h1 class="sub-title">About Me</h1>
@@ -70,12 +72,12 @@
                         <li><span>Languages & Tools</span>
                             <br>
                         <div class="langs">
-                            <i class="fa-brands fa-react" style="color: #61dbfb;"></i>
-                            <i class="fa-brands fa-swift" style="color: #f05035;"></i>
-                            <i class="fa-brands fa-square-js" style="color: #f0dc4e;"></i>
-                            <i class="fa-brands fa-html5" style="color: #f16529;"></i>
-                            <i class="fa-brands fa-css3-alt" style="color: #2465f1;"></i>
-                            <i class="fa-brands fa-figma" style="color: white;"></i>
+                            <i class="fa-brands fa-react about-lang" style="color: #61dbfb;"></i>
+                            <i class="fa-brands fa-swift about-lang" style="color: #f05035;"></i>
+                            <i class="fa-brands fa-square-js about-lang" style="color: #f0dc4e;"></i>
+                            <i class="fa-brands fa-html5 about-lang" style="color: #f16529;"></i>
+                            <i class="fa-brands fa-css3-alt about-lang" style="color: #2465f1;"></i>
+                            <i class="fa-brands fa-figma about-lang" style="color: white;"></i>
                         </div>
                         </li>
                     </ul>
@@ -203,6 +205,23 @@
 </div>
 
 <script>
+
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.from(".fa-brands", {
+        scrollTrigger: {
+            trigger: ".fa-brands",
+        },
+        x: -1000,
+    })
+    gsap.to(".fa-brands", {
+        scrollTrigger: {
+            trigger: ".fa-brands",
+            toggleActions: "restart none restart none"
+        },
+        x: 0,
+        rotation: 360,
+        duration: 3
+    })
 
     var tablinks = document.getElementsByClassName("tab-links")
     var tabcontents = document.getElementsByClassName("tab-contents")

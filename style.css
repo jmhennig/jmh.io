@@ -78,9 +78,6 @@ nav ul li a:hover::after {
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.about-img{
-    x: -500px;
-}
 .about-col-1{
     flex-basis: 35%;
 }
@@ -98,9 +95,6 @@ nav ul li a:hover::after {
 }
 .about-col-2 p{
     text-align: justify;
-}
-.about-lang{
-
 }
 .tab-titles{
     display: flex;

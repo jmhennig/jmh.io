@@ -206,7 +206,9 @@
 
 <script>
 
+    // GSAP scroll triggers
     gsap.registerPlugin(ScrollTrigger);
+    // Languages trigger
     gsap.from(".fa-brands", {
         scrollTrigger: {
             trigger: ".fa-brands",
@@ -221,6 +223,21 @@
         x: 0,
         rotation: 360,
         duration: 3
+    })
+    // About-img trigger
+    gsap.from(".about-img", {
+        scrollTrigger: {
+            trigger: "about.img",
+        },
+        x: -700,
+    })
+    gsap.to(".about-img", {
+        scrollTrigger: {
+            trigger: ".about-img",
+            toggleActions: "restart none restart none"
+        },
+        x: 0,
+        duration: 2
     })
 
     var tablinks = document.getElementsByClassName("tab-links")

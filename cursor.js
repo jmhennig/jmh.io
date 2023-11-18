@@ -23,6 +23,7 @@ document.addEventListener('mousemove', (e) => {
         });
     }
 
+    
     // Apply the effect to links and buttons
     const links = document.querySelectorAll('a');
     const buttons = document.querySelectorAll('button');

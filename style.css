@@ -11,26 +11,37 @@
     left: 0;
     pointer-events: none; /* Ensure the cursor doesn't interfere with elements */
     z-index: 9999; /* Set a high z-index to make sure it's on top of other elements */
-  }
-  .cursor {
+}
+.cursor {
     position: absolute;
     width: 5px;
     height: 5px;
     background-color: white;
     border-radius: 50%;
     transform: translate(-50%, -50%);
-  }
-  .cursor-ring {
+}
+.cursor-ring {
     position: absolute;
-    width: 30px;
-    height: 30px;
-    border: 2px solid #2ECC71;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #2ECC71;
     border-radius: 50%;
     transform: translate(-50%, -50%);
-    animation: pulse 1.5s infinite;
-  }
+    /* animation: pulse 1.5s infinite; */
+    transition: width 0.2s, height 0.5s, opacity 0.5s;
+}
+.cursor-ring.hovered {
+    width: 50px;
+    height: 50px;
+    border: 2px solid whitesmoke;
+    opacity: 50%;
+}
+a:visited {
+    text-decoration: none;
+}
 
-  @keyframes pulse {
+/* 
+@keyframes pulse {
     0% {
       transform: translate(-50%, -50%) scale(1);
       opacity: 0.8;
@@ -44,8 +55,21 @@
       opacity: 0.8;
     }
   }
+*/
+
 html{
     scroll-behavior: smooth;
+}
+a, button{
+    cursor: none;
+}
+.cursor-ring:hover a{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #2ECC71;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
 }
 body{
     background: black;
@@ -88,8 +112,8 @@ nav ul li a::after {
     left: 0;
     bottom: -6px;
 }
-nav ul li a:hover::after {
-    width: 100%;
+nav ul li a:hover {
+    color: #2ECC71;
     transition: 0.4s ease-in-out;
 }
 .logo{
@@ -146,7 +170,6 @@ nav ul li a:hover::after {
     margin-right: 50px;
     font-size: 18px;
     font-weight: 500;
-    cursor: pointer;
     position: relative;
 }
 .tab-links:hover{
@@ -258,7 +281,7 @@ nav ul li a:hover::after {
 .layer{
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(0,0,0,0.6), #2ECC71);
+    background: linear-gradient(rgba(0,0,0,0.7), #2ECC71);
     border-radius: 20px;
     position: absolute;
     left: 0;
@@ -272,22 +295,17 @@ nav ul li a:hover::after {
     text-align: center;
     font-size: 14px;
     transition: height 0.4s;
+    text-decoration: none;
 }
 .layer h3{
     font-weight: 500;
+    font-size: 20px;
     margin-bottom: 20px;
-}
-.layer a{
-    margin-top: 20px;
-    color: black;
     text-decoration: none;
-    font-size: 30px;
-    line-height: 65px;
-    background: whitesmoke;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    text-align: center;
+}
+.layer p{
+    line-height: 35px;
+    font-size: 15px;
 }
 .work:hover .layer{
     height: 100%;
@@ -305,6 +323,7 @@ nav ul li a:hover::after {
 }
 .btn:hover{
     background: #2ECC71;
+    cursor: none;
 }
 
 
@@ -341,6 +360,7 @@ nav ul li a:hover::after {
 .btn.btn2{
     display: inline-block;
     background: #2ECC71;
+    cursor: none;
 }
 .btn.btn2:hover{
     background: #1f8b4c;
@@ -363,7 +383,6 @@ form .btn2{
     padding: 14px 60px;
     font-size: 18px;
     margin-top: 20px;
-    cursor: pointer;
 }
 .copyright{
     width: 100%;
@@ -447,7 +466,7 @@ nav .fa-solid{
 
 @media only screen and (max-width: 600px){
     #header{
-        background-image: url(Images/mobile-background.png);
+        background-image: url(Media/mobile-background.png);
     }
     .cursor-container{
         opacity: 0;
@@ -486,7 +505,7 @@ nav .fa-solid{
         position: absolute;
         top: 25px;
         left: 25px;
-        cursor: pointer;
+        cursor: none;
     }
     .sub-title{
         font-size: 40px;

@@ -451,7 +451,7 @@ nav .fa-solid{
         background-image: url(Media/mobile-background.png);
     }
     .cursor-container{
-        opacity: 100;
+        opacity: 0%;
     }
     .header-text{
         margin-top: 70%;

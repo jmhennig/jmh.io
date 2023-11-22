@@ -450,9 +450,6 @@ nav .fa-solid{
     #header{
         background-image: url(Media/mobile-background.png);
     }
-    .cursor-container{
-        opacity: 0;
-    }
     .header-text{
         margin-top: 70%;
         font-size: 16px;

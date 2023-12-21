@@ -351,6 +351,7 @@ nav ul li a:hover {
 }
 .contact-right form{
     width: 100%;
+    margin-top: 30px
 }
 form input, form textarea{
     width: 100%;

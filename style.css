@@ -531,6 +531,12 @@ nav .fa-solid{
     .project .column2{
         margin-top: 20px;
     }
+    .btn.btn2{
+        align-items: center;
+    }
+    form .btn2{
+        align-items: center;
+    }
     .demo-video{
         width: 100%;
     }

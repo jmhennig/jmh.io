@@ -119,6 +119,7 @@ nav ul li a:hover {
 #about{
     padding: 80px 0;
     color: #ababab;
+    background-color: black;
 }
 .row{
     display: flex;
@@ -198,6 +199,7 @@ nav ul li a:hover {
 /* ---------------services--------------- */
 #services{
     padding: 30px 0;
+    background-color: black;
 }
 .services-list{
     display: grid;

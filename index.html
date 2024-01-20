@@ -60,14 +60,14 @@
                 <div class="about-col-1">
                     <canvas id="canvas3d" width="100%" height="100%"></canvas>
                     <script>
-                      // Spline animation code
-                      import { Application } from '@splinetool/runtime';
+                        // Load Spline animation after the Spline runtime script is available
+                        document.addEventListener('DOMContentLoaded', function () {
+                          const canvas = document.getElementById('canvas3d');
+                          const app = new spline.runtime.Application(canvas);
                   
-                      const canvas = document.getElementById('canvas3d');
-                      const app = new Application(canvas);
-                  
-                      // Load Spline scene
-                      app.load('https://prod.spline.design/xhw9MXmmW5ytALr5/scene.splinecode');
+                          // Load Spline scene
+                          app.load('https://prod.spline.design/xhw9MXmmW5ytALr5/scene.splinecode');
+                        });
                     </script>
                 </div>
                 <div class="about-col-2">

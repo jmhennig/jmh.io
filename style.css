@@ -105,6 +105,7 @@ nav ul li a:hover {
 .header-text{
     margin-top: 20%;
     font-size: 30px;
+    text-shadow: 5px 5px 15px black;
 }
 .header-text h1{
     font-size: 60px;
@@ -392,7 +393,6 @@ form .btn2{
 }
 .links-list{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 40px;
     margin-top: 50px;
 }
@@ -416,9 +416,13 @@ form .btn2{
     text-shadow: 5px 5px 10px black;
 }
 .project .row{
-    display: flex;
+    display: block;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+.row{
+    align-items: center;
+    flex: 100%;
 }
 .project .column1{
     flex-basis: 50%;
@@ -427,6 +431,11 @@ form .btn2{
 .project .column2{
     flex-basis: 50%;
     text-align: center;
+}
+p.langs-used{
+    color: whitesmoke;
+    font-weight: bolder;
+    padding: 20px 0;
 }
 .column1 .btn2{
     font-size: 15px;
@@ -437,8 +446,28 @@ form .btn2{
     box-shadow: 5px 5px 25px black;
     cursor: pointer;
 }
-.demo-video{
+.column2 .btn2{
+    font-size: 15px;
+    font-weight: 500;
+    margin: 30px 40px;
+    width: 75%;
+    text-align: center;
+    box-shadow: 5px 5px 25px black;
+    cursor: pointer;
+}
+.demo-video1{
+    margin-top: 20px;
     width: 80%;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 5px 5px 40px black;
+}
+.demo-video2{
+    margin-top: 40px;
+    margin-left: 5%;
+    width: 90%;
+    align-items: center;
     text-align: center;
     border-radius: 20px;
     box-shadow: 5px 5px 40px black;
@@ -542,3 +571,4 @@ nav .fa-solid{
         width: 100%;
     }
 }
+

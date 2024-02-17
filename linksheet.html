@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="icon" href="Media/favicon2.ico">
     <script src="https://kit.fontawesome.com/6654d6be92.js" crossorigin="anonymous"></script>
+    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
     <script src="cursor.js"></script>
 </head>
 <body>
@@ -25,9 +26,7 @@
             <nav>
                 <img src="Media/logo-no-background.png" class="logo">
                 <ul id="sidemenu">
-                    <li><a href="/index.html#header">Home</a></li>
-                    <li><a href="/index.html#about">About</a></li>
-                    <li><a href="/jmh.io/index.html#services">Services</a></li>
+                    <li><a href="/index.html">Home</a></li>
                     <li><a href="/linksheet.html">Portfolio</a></li>
                     <li><a href="/index.html#contact">Contact</a></li>
                     <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
@@ -68,7 +67,7 @@
                     </a>
                 </div>
                 <div class="column2">
-                    <video playsinline autoplay loop class="demo-video1" src="Media/Rumii-mockup.mp4" preload="auto" ></video>
+                    <video playsinline autoplay loop class="demo-video1" src="Media/Rumii-mockup.mp4" preload="auto"></video>
                 </div>
             </div>
             <div class="project row">
@@ -78,7 +77,7 @@
                         Work in progress... 
                     </p>
                     <p class="langs-used">
-                        Developed with React.js & MongoDB, with Spline & GSAP integrations
+                        Developed with React.js & MongoDB, along with Spline & GSAP integrations.
                     </p>
                 </div>
                 <div class="column2">
@@ -93,8 +92,8 @@
                         <button class="btn btn2" style="cursor: none">Source Code</button>
                     </a>
                 </div>
-                <div class="row mockup">
-                    <video playsinline autoplay loop class="demo-video2" src="Media/Rumii-WebApp-Mockup.mp4" preload="auto" ></video>
+                <div class="row">
+                    <video playsinline loop class="demo-video2" src="Media/Rumii-WebApp-Mockup.mp4" preload="auto" controls></video>
                 </div>
             </div>
             <div class="project row">
@@ -109,7 +108,7 @@
                 </div>
                 <div class="column2">
                     <a 
-                        href="" style="text-decoration: none; color: whitesmoke; cursor: none" download>
+                        href="Media/Rumii-WebApp-Mockup.mp4" style="text-decoration: none; color: whitesmoke; cursor: none" download>
                         <button class="btn btn2" style="cursor: none">Demo Video</button>
                     </a>
                     <a
@@ -119,10 +118,43 @@
                         <button class="btn btn2" style="cursor: none">Source Code</button>
                     </a>
                 </div>
-                <div class="row mockup">
-                    <video playsinline autoplay loop class="demo-video2" src="Media/Rumii-mockup.mp4" preload="auto" ></video>
+            </div>
+        </div>
+    </div>
+    
+    <div id="contact">
+        <div class="container">
+            <h1 class="sub-title">Contact Me</h1>
+            <div class="row">
+                <div class="contact-left">
+                    <p><i class="bi bi-send-fill"></i> JMHennig21@gmail.com</p>
+                    <p><i class="bi bi-telephone-fill"></i> (516) 376-4800</p>
+                    <div class="social-icons">
+                        <a href="https://www.github.com/jmhennig">
+                            <div class="github-btn">
+                                <i style="height: 10px; padding-right: 5px;" class="bi bi-github" ></i> 
+                                GitHub
+                            </div>
+                        </a>
+                        <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="jason-hennig-447a19219" data-version="v1">
+                          <a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/jason-hennig-447a19219?trk=profile-badge"></a>
+                        </div>
+                    </div>
+                    <a href="Media/Jason Hennig Resume 2024.pdf" download class="btn btn2">Download Resume</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
                 </div>
             </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright @ JMH.io Made with <i class="bi bi-emoji-laughing-fill"></i> by Jason Hennig</p>
         </div>
     </div>
 

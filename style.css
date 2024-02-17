@@ -209,7 +209,7 @@ nav ul li a:hover {
     margin-top: 50px;
 }
 .services-list div{
-    background: #262626fe;
+    background: #262626;
     padding: 40px;
     font-size: 13px;
     font-weight: 300;
@@ -246,7 +246,7 @@ nav ul li a:hover {
 .work-list{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 40px;
+    gap: 40px;
     margin-top: 50px;
 }
 .work{
@@ -304,7 +304,7 @@ nav ul li a:hover {
     border-radius: 6px;
     text-decoration: none;
     color: whitesmoke;
-    transition: background 0.5s;
+    transition: background 0.3s;
 }
 .btn:hover{
     background: #2ECC71;
@@ -313,6 +313,7 @@ nav ul li a:hover {
 
 
 /* ------------contact------------- */
+
 .contact-left{
     flex-basis: 35%;
 }
@@ -321,6 +322,8 @@ nav ul li a:hover {
 }
 .contact-left p{
     margin-top: 30px;
+    text-decoration: none;
+    color: #f5f5f5;
 }
 .contact-left p i{
     color: #2ECC71;
@@ -330,17 +333,23 @@ nav ul li a:hover {
 .social-icons{
     margin-top: 30px;
 }
-.social-icons a{
-    text-decoration: none;
-    font-size: 30px;
-    margin-right: 15px;
-    color:#ababab;
+.github-btn{
+    width: 250px;
+    height: 50px;
+    margin-bottom: 30px;
+    padding-top: 10px;
+    background: transparent;
+    color: #f5f5f5;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
     display: inline-block;
-    transition: transform 0.5s;
+    border: 1px solid #f5f5f5;
+    border-radius: 6px;
 }
-.social-icons a:hover{
-    color: #2ECC71;
-    transform: translateY(-5px);
+.github-btn:hover{
+    border: 3px solid #f5f5f5;
+    transition: border 0.3s ease;
 }
 .btn.btn2{
     display: inline-block;
@@ -349,10 +358,11 @@ nav ul li a:hover {
 }
 .btn.btn2:hover{
     background: #1f8b4c;
+    transition: 0.3s ease;
 }
 .contact-right form{
     width: 100%;
-    margin-top: 30px
+    margin-top: 30px;
 }
 form input, form textarea{
     width: 100%;
@@ -393,8 +403,8 @@ form .btn2{
 }
 .links-list{
     display: grid;
-    grid-gap: 40px;
-    margin-top: 50px;
+    gap: 50px;
+    margin-top: 40px;
 }
 .project{
     background: #262626fe;
@@ -403,6 +413,7 @@ form .btn2{
     font-weight: 300;
     border-radius: 20px;
     transition:  0.4s ease-in-out;
+    margin-bottom: 40px;
 }
 .project h2{
     text-shadow: 15px 10px 10px black;
@@ -415,18 +426,9 @@ form .btn2{
     color:#ababab;
     text-shadow: 5px 5px 10px black;
 }
-.project .row{
-    display: block;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-.row{
-    align-items: center;
-    flex: 100%;
-}
 .project .column1{
     flex-basis: 50%;
-    text-align: center
+    text-align: left;
 }
 .project .column2{
     flex-basis: 50%;
@@ -437,6 +439,7 @@ p.langs-used{
     font-weight: bolder;
     padding: 20px 0;
 }
+
 .column1 .btn2{
     font-size: 15px;
     font-weight: 500;
@@ -558,6 +561,9 @@ nav .fa-solid{
         flex-basis: 100%;
         text-align: center;
     }
+    .project .column1 h2{
+        
+    }
     .project .column2{
         margin-top: 20px;
     }
@@ -567,8 +573,9 @@ nav .fa-solid{
     form .btn2{
         align-items: center;
     }
-    .demo-video{
+    .demo-video1, .demo-video2{
         width: 100%;
+        margin-left: 0;
     }
 }
 

@@ -33,19 +33,19 @@
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
-                    <li><a href="/linksheet.html">Portfolio</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                 </ul>
                 <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
-                <p>Software Developer</p>
+                <p>UI Designer & Developer</p>
                 <h1>
                     Hi, I'm <span>Jason</span>.
                     </h1>
                 <h2>
-                    A Passionate Front-End
+                    A Passionate Full-Stack
                     <br>
                     Developer, based in New York.
                 </h2>
@@ -64,7 +64,7 @@
                     <p>
                         I believe that technology should not only be functional but also
                         aesthetically pleasing and user-friendly. This belief has fueled
-                        my desire to specialize in Front-End design and development, as it allows
+                        my desire to specialize in UI design and development, as it allows
                         me to combine my passions for art and technology to create exceptional
                         user experiences.
                     </p>
@@ -94,7 +94,7 @@
                     </div>
                     <div class="tab-contents" id="experience">
                         <ul>
-                            <li><span>8/2023 - Present</span><br>Freelance Software Development</li>
+                            <li><span>12/2022 - Present</span><br>Freelance UI Design & Development</li>
                             <li><span>9/2021 - Present</span><br>Appeals Coordinator at Med-Metrix</li>
                         </ul>
                     </div>
@@ -155,6 +155,18 @@
             <h1 class="sub-title">My Work</h1>
             <div class="work-list">
                 <div class="work">
+                    <a href="linksheet.html" style="color: whitesmoke;">
+                        <img src="Media/RumiiWeb-preview-final.png">
+                        <div class="layer">
+                            <h3>Rumii Web App</h3>
+                            <p>
+                                I designed this app for a company called Rumii, which specializes in making bags specifically for nurses. 
+                                The app's display is practical, simplistic, and visually appealing. Designed in Figma, developed via SwiftUI.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="work">
                     <a href="#header" style="color: whitesmoke;">
                         <img src="Media/mobile-preview-final.png">
                         <div class="layer">
@@ -168,24 +180,13 @@
                     </a>
                 </div>
                 <div class="work">
-                    <a href="linksheet.html" style="color: whitesmoke; font-size: 10px">
+                    <a href="linksheet.html" style="color: whitesmoke;">
                         <img src="Media/Rumii-preview-final.png">
                         <div class="layer">
-                            <h3>Rumii iOS App</h3>
+                            <h3>Rumii Mobile App</h3>
                             <p>
                                 I designed this app for a company called Rumii, which specializes in making bags specifically for nurses. 
-                                The app's display is practical, simplistic, and visually appealing. Designed in Figma, developed via SwiftUI & Foundation. 
-                            </p>
-                        </div>
-                    </a>
-                </div>
-                <div class="work">
-                    <a href="linksheet.html" style="color: whitesmoke;">
-                        <img src="Media/Rumii-WebApp-Preview.png">
-                        <div class="layer">
-                            <h3>Rumii Web App</h3>
-                            <p>
-                                I started on this project for Rumii to serve as an update to their current e-commerce website. Developed from a Figma design with React.js & MongoDB, along with Spline & GSAP integrations.
+                                The app's display is practical, simplistic, and visually appealing. Designed in Figma, developed via SwiftUI.
                             </p>
                         </div>
                     </a>
@@ -202,24 +203,40 @@
                 <div class="contact-left">
                     <p><i class="bi bi-send-fill"></i> JMHennig21@gmail.com</p>
                     <p><i class="bi bi-telephone-fill"></i> (516) 376-4800</p>
-                    <div class="social-icons">
-                        <a href="https://www.github.com/jmhennig">
-                            <div class="github-btn">
-                                <i style="height: 10px; padding-right: 5px;" class="bi bi-github" ></i> 
-                                GitHub
-                            </div>
+                    <div class="socials">
+                        <a 
+                            class="social-btn" 
+                            href="https://github.com/jmhennig">
+                            <i class="bi bi-github"></i>
+                            GitHub
                         </a>
-                        <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="jason-hennig-447a19219" data-version="v1">
-                          <a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/jason-hennig-447a19219?trk=profile-badge"></a>
+                        
+                        <a href="Media/Jason's Resume.pdf" download class="social-btn">Download Resume</a>
+
+                        <div class="linkedin-btn">
+                            <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="jason-hennig-447a19219" data-version="v1">
+                            <a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/jason-hennig-447a19219?trk=profile-badge"></a>
+                            </div>
                         </div>
+                        
                     </div>
-                    <a href="Media/Jason's Resume.pdf" download class="btn btn2">Download Resume</a>
                 </div>
                 <div class="contact-right">
-                    <form name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="Email" placeholder="Your Email" required>
-                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <form
+                        name="submit-to-google-sheet"
+                        action="mailto:jmhennig21@gmail.com"
+                        method="POST"
+                        enctype="text/plain"
+                        >
+                        <label for="Name">Name :</label>
+                        <input id="Name" name="Name" placeholder="Your Name" required>
+    
+                        <label for="Email">Email :</label>
+                        <input id="Email" name="Email" placeholder="Your Email" required>
+        
+                        <label for="Message">Message :</label>
+                        <textarea id="Message" name="Message" rows="6" placeholder="Your Message"></textarea>
+
                         <button type="submit" class="btn btn2">Submit</button>
                     </form>
                     <span id="msg"></span>
@@ -228,6 +245,8 @@
         </div>
         <div class="copyright">
             <p>Copyright @ JMH.io Made with <i class="bi bi-emoji-laughing-fill"></i> by Jason Hennig</p>
+            <br>
+            <span id="siteseal"><script async type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=YZ50ROw7T8eDduLHVun7RcXnmU0y9H9OalM0LFAipsQLRXPniNVHtwxbhI90"></script></span>
         </div>
     </div>
 </div>

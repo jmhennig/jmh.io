@@ -132,7 +132,8 @@ nav ul li a:hover {
 }
 .about-col-1 img{
     width: 100%;
-    border-radius: 20px;
+    border-radius: 5px;
+    outline: 2px solid white;
 }
 .about-col-2{
     flex-basis: 60%;
@@ -209,11 +210,13 @@ nav ul li a:hover {
     margin-top: 50px;
 }
 .services-list div{
-    background: #262626;
+    background: #262626fe;
     padding: 40px;
     font-size: 13px;
     font-weight: 300;
     border-radius: 20px;
+    outline: 1px solid white;
+    box-shadow: 0 0 15px whitesmoke;
     transition:  0.4s ease-in-out;
 }
 .services-list div i{
@@ -246,13 +249,15 @@ nav ul li a:hover {
 .work-list{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
+    grid-gap: 40px;
     margin-top: 50px;
 }
 .work{
     border-radius: 20px;
     position: relative;
     overflow: hidden;
+    outline: 1px solid white;
+    box-shadow: 0 0 15px whitesmoke;
 }
 .work img{
     width: 100%;
@@ -304,7 +309,7 @@ nav ul li a:hover {
     border-radius: 6px;
     text-decoration: none;
     color: whitesmoke;
-    transition: background 0.3s;
+    transition: background 0.2s;
 }
 .btn:hover{
     background: #2ECC71;
@@ -313,43 +318,59 @@ nav ul li a:hover {
 
 
 /* ------------contact------------- */
-
 .contact-left{
     flex-basis: 35%;
 }
 .contact-right{
     flex-basis: 60%;
 }
+.contact-right label{
+    padding-left: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    color: whitesmoke;
+}
 .contact-left p{
     margin-top: 30px;
-    text-decoration: none;
-    color: #f5f5f5;
 }
 .contact-left p i{
     color: #2ECC71;
     margin-right: 15px;
     font-size: 25px;
 }
-.social-icons{
+.socials{
     margin-top: 30px;
 }
-.github-btn{
-    width: 250px;
-    height: 50px;
-    margin-bottom: 30px;
-    padding-top: 10px;
-    background: transparent;
-    color: #f5f5f5;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    display: inline-block;
-    border: 1px solid #f5f5f5;
-    border-radius: 6px;
+.socials a{
+    text-decoration: none;
 }
-.github-btn:hover{
-    border: 3px solid #f5f5f5;
-    transition: border 0.3s ease;
+.social-btn{
+    height: 50px;
+    width: 250px;
+    display: inline-block;
+    padding-top: 14px;
+    text-align: center;
+    font-weight: 400;
+    border-radius: 8px;
+    outline: 1px solid white;
+    background-color: none;
+    color: white;
+    margin-bottom: 35px;
+    text-decoration: none;
+    transition: color, background-color 0.2s ease-in-out;
+}
+.social-btn:hover{
+    background: white;
+    color: black;
+}
+.linkedin-btn{
+    height: auto;
+    width: 250px;
+    display: inline-block;
+    margin-bottom: 50px;
+    text-align: center;
+    border-radius: 8px;
+    outline: 1px solid white;
 }
 .btn.btn2{
     display: inline-block;
@@ -358,17 +379,17 @@ nav ul li a:hover {
 }
 .btn.btn2:hover{
     background: #1f8b4c;
-    transition: 0.3s ease;
 }
 .contact-right form{
     width: 100%;
-    margin-top: 30px;
+    margin-top: 30px
 }
 form input, form textarea{
     width: 100%;
     border: 0;
     outline: none;
     background: #262626fe;
+    outline: 0.5px solid white;
     padding: 15px;
     margin: 15px 0;
     color:  whitesmoke;
@@ -413,7 +434,8 @@ form .btn2{
     font-weight: 300;
     border-radius: 20px;
     transition:  0.4s ease-in-out;
-    margin-bottom: 40px;
+    outline: 1px solid white;
+    box-shadow: 0 0 20px whitesmoke;
 }
 .project h2{
     text-shadow: 15px 10px 10px black;
@@ -428,7 +450,7 @@ form .btn2{
 }
 .project .column1{
     flex-basis: 50%;
-    text-align: left;
+    text-align: center
 }
 .project .column2{
     flex-basis: 50%;
@@ -439,7 +461,6 @@ p.langs-used{
     font-weight: bolder;
     padding: 20px 0;
 }
-
 .column1 .btn2{
     font-size: 15px;
     font-weight: 500;
@@ -463,7 +484,7 @@ p.langs-used{
     width: 80%;
     align-items: center;
     text-align: center;
-    border-radius: 20px;
+    border-radius: 10px;
     box-shadow: 5px 5px 40px black;
 }
 .demo-video2{
@@ -472,9 +493,10 @@ p.langs-used{
     width: 90%;
     align-items: center;
     text-align: center;
-    border-radius: 20px;
+    border-radius: 10px;
     box-shadow: 5px 5px 40px black;
 }
+
 
 /* -----------------css for small screens-------------- */
 nav .fa-solid{
@@ -561,9 +583,6 @@ nav .fa-solid{
         flex-basis: 100%;
         text-align: center;
     }
-    .project .column1 h2{
-        
-    }
     .project .column2{
         margin-top: 20px;
     }
@@ -573,9 +592,8 @@ nav .fa-solid{
     form .btn2{
         align-items: center;
     }
-    .demo-video1, .demo-video2{
+    .demo-video{
         width: 100%;
-        margin-left: 0;
     }
 }
 

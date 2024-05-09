@@ -26,7 +26,9 @@
             <nav>
                 <img src="Media/logo-no-background.png" class="logo">
                 <ul id="sidemenu">
-                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/index.html#header">Home</a></li>
+                    <li><a href="/index.html#about">About</a></li>
+                    <li><a href="/jmh.io/index.html#services">Services</a></li>
                     <li><a href="/linksheet.html">Portfolio</a></li>
                     <li><a href="/index.html#contact">Contact</a></li>
                     <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
@@ -56,7 +58,7 @@
                         <button class="btn btn2" style="cursor: none">Figma Design</button>
                     </a>
                     <a 
-                        href="Media/Rumii-mockup.mp4" style="text-decoration: none; color: whitesmoke; cursor: none" download>
+                        href="Media/Rumii_mobile_mockup.mov" style="text-decoration: none; color: whitesmoke; cursor: none" download>
                         <button class="btn btn2" style="cursor: none">Demo Video</button>
                     </a>
                     <a
@@ -67,7 +69,7 @@
                     </a>
                 </div>
                 <div class="column2">
-                    <video playsinline autoplay loop class="demo-video1" src="Media/Rumii-mockup.mp4" preload="auto"></video>
+                    <video id="video1" playsinline loop class="demo-video1" src="Media/Rumii_mobile_mockup.mov" preload="auto" controls></video>
                 </div>
             </div>
             <div class="project row">
@@ -77,12 +79,12 @@
                         Work in progress... 
                     </p>
                     <p class="langs-used">
-                        Developed with React.js & MongoDB, along with Spline & GSAP integrations.
+                        Developed from a Figma design with React.js & MongoDB, along with Spline & GSAP integrations.
                     </p>
                 </div>
                 <div class="column2">
                     <a 
-                        href="" style="text-decoration: none; color: whitesmoke; cursor: none" download>
+                        href="Media/Rumii-WebApp-Mockup.mp4" style="text-decoration: none; color: whitesmoke; cursor: none" download>
                         <button class="btn btn2" style="cursor: none">Demo Video</button>
                     </a>
                     <a
@@ -93,7 +95,7 @@
                     </a>
                 </div>
                 <div class="row">
-                    <video playsinline loop class="demo-video2" src="Media/Rumii-WebApp-Mockup.mp4" preload="auto" controls></video>
+                    <video id="video2" playsinline loop class="demo-video2" src="Media/Rumii-WebApp-Mockup.mp4" preload="auto" controls></video>
                 </div>
             </div>
             <div class="project row">
@@ -108,45 +110,65 @@
                 </div>
                 <div class="column2">
                     <a 
-                        href="Media/Rumii-WebApp-Mockup.mp4" style="text-decoration: none; color: whitesmoke; cursor: none" download>
+                        href="Media/Admin_mockup.mov" style="text-decoration: none; color: whitesmoke; cursor: none" download>
                         <button class="btn btn2" style="cursor: none">Demo Video</button>
                     </a>
                     <a
-                        href="https://github.com/jmhennig/Rumii" 
+                        href="https://github.com/jmhennig/AdminPanel" 
                         target="_blank" rel="noopener noreferrer"
                         style="text-decoration: none; color: whitesmoke; cursor: none">
                         <button class="btn btn2" style="cursor: none">Source Code</button>
                     </a>
                 </div>
+                <div class="row">
+                    <video id="video3" playsinline loop class="demo-video2" src="Media/Admin_mockup.mov" preload="auto" controls></video>
+                </div>
             </div>
         </div>
     </div>
-    
+
     <div id="contact">
         <div class="container">
-            <h1 class="sub-title">Contact Me</h1>
+          <h1 class="sub-title">Contact Me</h1>
             <div class="row">
+                
                 <div class="contact-left">
                     <p><i class="bi bi-send-fill"></i> JMHennig21@gmail.com</p>
                     <p><i class="bi bi-telephone-fill"></i> (516) 376-4800</p>
-                    <div class="social-icons">
-                        <a href="https://www.github.com/jmhennig">
-                            <div class="github-btn">
-                                <i style="height: 10px; padding-right: 5px;" class="bi bi-github" ></i> 
-                                GitHub
-                            </div>
+                    <div class="socials">
+                        <a 
+                            class="social-btn" 
+                            href="https://github.com/jmhennig">
+                            <i class="bi bi-github"></i>
+                            GitHub
                         </a>
-                        <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="jason-hennig-447a19219" data-version="v1">
-                          <a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/jason-hennig-447a19219?trk=profile-badge"></a>
+                        
+                        <a href="Media/Jason's Resume.pdf" download class="social-btn">Download Resume</a>
+
+                        <div class="linkedin-btn">
+                            <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="jason-hennig-447a19219" data-version="v1">
+                            <a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/jason-hennig-447a19219?trk=profile-badge"></a>
+                            </div>
                         </div>
                     </div>
-                    <a href="Media/Jason Hennig Resume 2024.pdf" download class="btn btn2">Download Resume</a>
                 </div>
+
                 <div class="contact-right">
-                    <form name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="Email" placeholder="Your Email" required>
-                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <form
+                        name="submit-to-google-sheet"
+                        action="mailto:jmhennig21@gmail.com"
+                        method="POST"
+                        enctype="text/plain"
+                        >
+                        <label for="Name">Name :</label>
+                        <input id="Name" name="Name" placeholder="Your Name" required>
+    
+                        <label for="Email">Email :</label>
+                        <input id="Email" name="Email" placeholder="Your Email" required>
+        
+                        <label for="Message">Message :</label>
+                        <textarea id="Message" name="Message" rows="6" placeholder="Your Message"></textarea>
+
                         <button type="submit" class="btn btn2">Submit</button>
                     </form>
                     <span id="msg"></span>
@@ -155,8 +177,11 @@
         </div>
         <div class="copyright">
             <p>Copyright @ JMH.io Made with <i class="bi bi-emoji-laughing-fill"></i> by Jason Hennig</p>
+            <br>
+            <span id="siteseal"><script async type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=YZ50ROw7T8eDduLHVun7RcXnmU0y9H9OalM0LFAipsQLRXPniNVHtwxbhI90"></script></span>
         </div>
     </div>
+
 
 <script>
 
@@ -169,6 +194,89 @@
     function closemenu(){
         sidemenu.style.right = "-200px";
     }
+
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxPXIWq6CiDLHiPG3wfnojO9NTOT7fVd_WjukLHBhDVTCRq-xQT4vgywUBKstS03iSO/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+    form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Your message has been sent!"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                }, 8000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+    })
+
+    // Video playback, responsive according to fraction of video that is visible on screen
+    var video1 = document.getElementById('video1');
+    var video2 = document.getElementById('video2');
+    var video3 = document.getElementById('video3');
+    var fraction = 0.8;
+
+    function checkScroll1() {
+        var x = video1.offsetLeft, y = video1.offsetTop, w = video1.offsetWidth, h = video1.offsetHeight, r = x + w, //right
+        b = y + h, //bottom
+        visibleX, visibleY, visible;
+
+        visibleX = Math.max(0, Math.min(w, window.pageXOffset + window.innerWidth - x, r - window.pageXOffset));
+        visibleY = Math.max(0, Math.min(h, window.pageYOffset + window.innerHeight - y, b - window.pageYOffset));
+
+        visible = visibleX * visibleY / (w * h);
+
+        if (visible > fraction) {
+            video1.play();
+        } else {
+            video1.pause();
+        }
+    }
+
+    function checkScroll2() {
+        var x = video2.offsetLeft, y = video2.offsetTop, w = video2.offsetWidth, h = video2.offsetHeight, r = x + w, //right
+        b = y + h, //bottom
+        visibleX, visibleY, visible;
+
+        visibleX = Math.max(0, Math.min(w, window.pageXOffset + window.innerWidth - x, r - window.pageXOffset));
+        visibleY = Math.max(0, Math.min(h, window.pageYOffset + window.innerHeight - y, b - window.pageYOffset));
+
+        visible = visibleX * visibleY / (w * h);
+
+        if (visible > fraction) {
+            video2.play();
+        } else {
+            video2.pause();
+        }
+    }
+
+    function checkScroll3() {
+        var x = video3.offsetLeft, y = video3.offsetTop, w = video3.offsetWidth, h = video3.offsetHeight, r = x + w, //right
+        b = y + h, //bottom
+        visibleX, visibleY, visible;
+
+        visibleX = Math.max(0, Math.min(w, window.pageXOffset + window.innerWidth - x, r - window.pageXOffset));
+        visibleY = Math.max(0, Math.min(h, window.pageYOffset + window.innerHeight - y, b - window.pageYOffset));
+
+        visible = visibleX * visibleY / (w * h);
+
+        if (visible > fraction) {
+            video3.play();
+        } else {
+            video3.pause();
+        }
+    }
+
+    checkScroll1();
+    checkScroll2();
+    checkScroll3();
+    window.addEventListener('scroll', checkScroll1, false);
+    window.addEventListener('resize', checkScroll1, false);
+    window.addEventListener('scroll', checkScroll2, false);
+    window.addEventListener('resize', checkScroll2, false);
+    window.addEventListener('scroll', checkScroll3, false);
+    window.addEventListener('resize', checkScroll3, false);
 
 </script>
 
